@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加法计算器</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h1>加法计算器</h1>
+
+    <!-- num1输入框 -->
+    <label for="num1">第一个数字：</label>
+    <input type="text" id="num1" name="name" placeholder="请输入第一个数字">
+
+    <!-- num2 -->
+    <label for="num2">第二个数字：</label>
+    <input type="text" id="num2" name="num2" placeholder="请输入第二个数字">
+
+    <!-- 提交按钮 -->
+    <button type="submit" id="myButton">计算</button>
+  </form>
+
+  <script>
+    const event = document.getElementById("myButton"); 
+    event.addEventListener("click", function() 
+    {        
+      let num1 = document.getElementById('num1').value;
+    let num2 = document.getElementById('num2').value;  
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    if (isNaN(num1) || isNaN(num2)) {
+  console.error("请输入有效的数字");
+}
+   else{
+      alert(num1+num2);
+    }
+  })
+  </script>
+
+</body>
+</html>
